@@ -221,49 +221,4 @@ class TrainingHelper:
         print("Training Completed.")
         train_writer.close()
         test_writer.close()
-        
-            
-"""                
-for module in model.modules():
-    print(module)
 
-list(model.layer1.modules())
-
-
-
-.layer4[]
-
-for l in list(model.modules()):
-    print(l)
-
-
-.layer4
-
-list(model.modules())
-
-list(model.parameters())[0]
-
-
-loss_fxn = nn.CrossEntropyLoss()
-opt = torch.optim.Adam(model.parameters(), lr=0.0001, weight_decay=0.0001)
-
-
-import cv2
-from DatasetHelper import CatvsDogDataset
-
-dataset_path = "M:/Datasets/dogs-vs-cats/train/"
-
-dataset = CatvsDogDataset(dataset_path, num_classes=2, transform=None)
-
-
-for i in range(len(dataset)):
-    sample = dataset[i]
-
-    print(i, sample['image'].shape, sample['label'].shape, sample['label'])
-
-    cv2.imshow('img', cv2.cvtColor(sample['image'], cv2.COLOR_BGR2RGB))
-    cv2.waitKey()
-    cv2.destroyAllWindows()
-
-
-"""
